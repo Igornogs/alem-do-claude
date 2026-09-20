@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="icone.png">
+<title>Além do Chat — Recursos da IA Claude</title>
+<meta name="description" content="Descubra recursos reais da Claude que vão muito além do chat de perguntas e respostas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#11100f;--panel:#191715;--panel2:#211e1b;--text:#f7f2ea;--muted:#aaa39a;--line:#39342f;--accent:#f07c4f;--accent2:#ff9a68;--green:#8dd3a9;--shadow:0 20px 70px #0008}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 75% 0,#3b2116 0,transparent 30%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.5}a{text-decoration:none;color:inherit}button{font:inherit;color:inherit}.wrap{width:min(1120px,92%);margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.04em}.logo span{color:var(--accent)}.nav a{color:var(--muted);font-size:14px}.hero{min-height:720px;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:70px 0 100px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #614332;background:#251a15;border-radius:999px;padding:7px 12px;color:#ffc1a4;font-size:13px;font-weight:600}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}h1,h2,h3{font-family:"Space Grotesk";line-height:1.02;letter-spacing:-.045em}h1{font-size:clamp(48px,7vw,82px);margin:20px 0}.hero p{font-size:19px;color:var(--muted);max-width:650px}.btn{border:0;background:var(--accent);padding:15px 21px;border-radius:13px;font-weight:700;cursor:pointer;box-shadow:0 12px 35px #f07c4f33;transition:.2s}.btn:hover{transform:translateY(-2px);background:var(--accent2)}.btn.secondary{background:transparent;border:1px solid var(--line);box-shadow:none;margin-left:8px}.visual{height:470px;position:relative;display:grid;place-items:center}.orb{width:290px;height:290px;border:1px solid #81533d;border-radius:50%;position:relative;box-shadow:0 0 100px #f07c4f18,inset 0 0 50px #f07c4f10;animation:pulse 5s ease-in-out infinite}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #5e493e;border-radius:50%;inset:34px;transform:rotate(35deg)}.orb:after{inset:70px;transform:rotate(-45deg)}.layer{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #8f5b43;background:#1e1714cc;backdrop-filter:blur(8px);border-radius:14px;padding:13px 18px;font-size:13px;white-space:nowrap;animation:float 4s ease-in-out infinite}.l1{transform:translate(-50%,-160px)}.l2{transform:translate(100px,-50%);animation-delay:.7s}.l3{transform:translate(-50%,120px);animation-delay:1.3s}.l4{transform:translate(-180px,-50%);animation-delay:1.9s}.section{padding:100px 0}.section-head{max-width:720px;margin-bottom:38px}.kicker{color:var(--accent);font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.14em}h2{font-size:clamp(34px,5vw,58px);margin:10px 0 15px}.muted{color:var(--muted)}.pain{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.pain div,.card,.quote,.offer,.faq{border:1px solid var(--line);background:linear-gradient(145deg,#1b1917,#141312);border-radius:18px}.pain div{padding:22px}.pain b{display:block;font-size:28px;color:var(--accent);margin-bottom:14px}.categories{display:grid;gap:42px}.cat h3{font-size:24px;margin:0 0 16px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{padding:20px;cursor:pointer;min-height:180px;transition:.25s}.card:hover,.card.open{border-color:#76513f;background:#201b18;transform:translateY(-3px)}.icon{font-size:28px}.card h4{font-family:"Space Grotesk";font-size:18px;margin:12px 0 7px}.card p{margin:0;color:var(--muted);font-size:14px}.example{display:none;margin-top:15px;padding-top:13px;border-top:1px solid var(--line);color:#dfd5ca;font-size:13px}.card.open .example{display:block}.demo{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}.demo-box{padding:25px;border-radius:20px;background:var(--panel);border:1px solid var(--line)}.task{font-size:20px;font-weight:700;margin:15px 0 20px}.choice{width:100%;text-align:left;padding:14px;margin:7px 0;border:1px solid var(--line);background:#12110f;border-radius:12px;cursor:pointer}.choice:hover{border-color:var(--accent)}.result{min-height:100%;display:flex;flex-direction:column;justify-content:center}.meter{height:12px;background:#302b27;border-radius:99px;overflow:hidden;margin:16px 0}.meter i{display:block;height:100%;width:20%;background:var(--accent);transition:.5s}.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.quote{padding:24px}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#302721;color:#ffc0a3;font-weight:700}.quote p{color:#ddd4ca}.offer{padding:45px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;box-shadow:var(--shadow);border-color:#624332}.price{font-family:"Space Grotesk";font-size:58px;font-weight:700}.price small{font-size:16px;color:var(--muted)}ul{padding-left:20px;color:var(--muted)}li{margin:10px 0}.compare{width:100%;border-collapse:collapse;margin-top:28px}.compare th,.compare td{text-align:left;padding:16px;border-bottom:1px solid var(--line)}.compare th{color:var(--accent)}.faq{overflow:hidden}.faq button{width:100%;padding:20px;background:transparent;border:0;text-align:left;display:flex;justify-content:space-between;cursor:pointer;font-weight:700}.answer{display:none;padding:0 20px 20px;color:var(--muted)}.faq.open .answer{display:block}.sticky{position:fixed;z-index:20;bottom:15px;left:50%;transform:translateX(-50%);width:min(650px,calc(100% - 24px));padding:9px;background:#171412eF;backdrop-filter:blur(15px);border:1px solid #594237;border-radius:16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 15px 50px #0009}.sticky span{font-size:13px;color:#ddd}.sticky .btn{padding:11px 16px}.reveal{opacity:0;transform:translateY(25px);transition:.7s}.reveal.visible{opacity:1;transform:none}.small{font-size:13px;color:var(--muted)}footer{padding:80px 0 120px;color:#777;text-align:center}@keyframes pulse{50%{transform:scale(1.05);box-shadow:0 0 120px #f07c4f28}}@keyframes float{50%{margin-top:-8px}}@media(max-width:850px){.hero,.demo,.offer{grid-template-columns:1fr}.hero{padding-top:30px}.visual{height:360px}.pain,.cards,.quotes{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr 1fr}.offer{padding:28px}.nav a{display:none}}@media(max-width:560px){.pain,.cards,.quotes{grid-template-columns:1fr}.hero{min-height:auto;padding-bottom:60px}.visual{transform:scale(.82);margin:-30px 0}.section{padding:70px 0}h1{font-size:47px}.btn.secondary{margin:8px 0 0}.sticky span{display:none}.sticky{justify-content:center}.compare{font-size:13px}.compare th,.compare td{padding:10px 7px}}
+</style>
+</head>
+<body>
+<header class="wrap nav"><div class="logo">Além<span> do Chat</span></div><a href="#recursos">Explorar recursos ↓</a></header>
+
+<main>
+<section class="wrap hero">
+<div>
+<div class="eyebrow"><span class="dot"></span> Guia prático • Claude</div>
+<h1>Você paga pela Claude e usa só 20% dela.</h1>
+<p>O problema não é falta de capacidade. É que a maioria usa uma ferramenta poderosa como se fosse apenas uma caixa de perguntas e respostas.</p>
+<div style="margin-top:28px"><a class="btn" href="https://pay.hotmart.com/N107685610D" target="_blank" rel="noopener noreferrer">Quero conhecer o guia →</a><a class="btn secondary" href="#demo">Testar agora</a></div>
+<p class="small" style="margin-top:15px">Recursos reais. Sem promessa de “hack secreto”.</p>
+</div>
+<div class="visual" aria-hidden="true"><div class="orb">
+<div class="layer l1">◈ Contexto persistente</div><div class="layer l2">▣ Arquivos reais</div><div class="layer l3">⌘ Ferramentas</div><div class="layer l4">✦ Raciocínio</div>
+</div></div>
+</section>
+
+<section class="section" id="dor"><div class="wrap">
+<div class="section-head reveal"><span class="kicker">O problema</span><h2>Você provavelmente está usando só a superfície.</h2><p class="muted">Não é sobre perguntar melhor. É sobre descobrir o que existe além da conversa.</p></div>
+<div class="pain">
+<div class="reveal"><b>01</b>Copiar e colar o mesmo contexto toda vez.</div>
+<div class="reveal"><b>02</b>Refazer do zero algo que poderia virar uma ferramenta.</div>
+<div class="reveal"><b>03</b>Mandar dados sem explorar análise, arquivos e código.</div>
+<div class="reveal"><b>04</b>Usar o chat sem saber quais recursos já estão disponíveis.</div>
+</div></div></section>
+
+<section class="section" id="recursos"><div class="wrap">
+<div class="section-head reveal"><span class="kicker">Por dentro</span><h2>O que quase ninguém pensa que ela faz.</h2><p class="muted">Clique nos cards para ver um exemplo de uso.</p></div>
+<div class="categories">
+<div class="cat reveal"><h3>A — Produtividade no dia a dia</h3><div class="cards">
+<div class="card"><span class="icon">◈</span><h4>Artifacts</h4><p>Crie apps, calculadoras e ferramentas interativas.</p><div class="example"><b>Exemplo:</b> “Crie uma calculadora de margem com campos editáveis.”</div></div>
+<div class="card"><span class="icon">↻</span><h4>Memória persistente</h4><p>Preferências e contexto podem continuar entre conversas.</p><div class="example"><b>Exemplo:</b> “Continue o projeto usando as decisões que já definimos.”</div></div>
+<div class="card"><span class="icon">▦</span><h4>Projects</h4><p>Um espaço com arquivos e instruções fixas para um projeto.</p><div class="example"><b>Exemplo:</b> manter briefing, documentos e regras de um produto juntos.</div></div>
+<div class="card"><span class="icon">Aa</span><h4>Estilos</h4><p>Personalize tom, formato e nível de detalhe.</p><div class="example"><b>Exemplo:</b> respostas curtas, diretas e em português brasileiro.</div>
+</div></div></div>
+
+<div class="cat reveal"><h3>B — Análise e raciocínio real</h3><div class="cards">
+<div class="card"><span class="icon">⌘</span><h4>Executa código</h4><p>Analise dados e planilhas usando computação real.</p><div class="example"><b>Exemplo:</b> cruzar milhares de linhas e gerar métricas.</div></div>
+<div class="card"><span class="icon">⌁</span><h4>Debug e testes</h4><p>Testa código em ambiente apropriado antes de entregar.</p><div class="example"><b>Exemplo:</b> encontrar um erro, executar o script e validar a correção.</div></div>
+<div class="card"><span class="icon">▤</span><h4>PDFs e imagens</h4><p>Trabalha com documentos, tabelas, gráficos e imagens.</p><div class="example"><b>Exemplo:</b> extrair uma tabela de um PDF escaneado.</div></div>
+<div class="card"><span class="icon">⌕</span><h4>Pesquisa em etapas</h4><p>Busca, cruza informações e cita fontes quando necessário.</p><div class="example"><b>Exemplo:</b> pesquisar um tema em várias fontes e comparar evidências.</div>
+</div></div></div>
+
+<div class="cat reveal"><h3>C — Criação de conteúdo real</h3><div class="cards">
+<div class="card"><span class="icon">▣</span><h4>Arquivos reais</h4><p>Word, Excel, PowerPoint, PDF e outros formatos.</p><div class="example"><b>Exemplo:</b> criar uma planilha com fórmulas prontas.</div></div>
+<div class="card"><span class="icon">◉</span><h4>Apps e dashboards</h4><p>Transforme uma ideia em uma ferramenta funcional.</p><div class="example"><b>Exemplo:</b> criar um painel de vendas com filtros.</div></div>
+<div class="card"><span class="icon">◇</span><h4>Diagramas</h4><p>Fluxogramas e arquiteturas podem ser gerados a partir de uma descrição.</p><div class="example"><b>Exemplo:</b> “Desenhe o fluxo de cadastro do meu SaaS.”</div></div>
+<div class="card"><span class="icon">✉</span><h4>Múltiplas versões</h4><p>Compare abordagens para mensagens e e-mails.</p><div class="example"><b>Exemplo:</b> versão direta, conciliadora e estratégica de uma negociação.</div>
+</div></div></div>
+
+<div class="cat reveal"><h3>D — Recursos avançados</h3><div class="cards">
+<div class="card"><span class="icon">✎</span><h4>Edição cirúrgica</h4><p>Altere só o trecho necessário de documentos longos.</p><div class="example"><b>Exemplo:</b> trocar uma cláusula sem reescrever o contrato inteiro.</div></div>
+<div class="card"><span class="icon">⇄</span><h4>Comparação estruturada</h4><p>Organize alternativas em tabelas lado a lado.</p><div class="example"><b>Exemplo:</b> comparar ferramentas por preço, recursos e limitações.</div></div>
+<div class="card"><span class="icon">文</span><h4>Tradução com nuance</h4><p>Adapte registro, contexto e linguagem.</p><div class="example"><b>Exemplo:</b> transformar uma mensagem em inglês formal ou casual.</div></div>
+<div class="card"><span class="icon">?</span><h4>Quizzes e flashcards</h4><p>Transforme qualquer material em estudo interativo.</p><div class="example"><b>Exemplo:</b> gerar um quiz a partir de um PDF de aula.</div></div>
+<div class="card"><span class="icon">⌘</span><h4>Conectores</h4><p>Integre serviços externos quando disponíveis e autorizados.</p><div class="example"><b>Exemplo:</b> trabalhar com dados de serviços conectados sem copiar tudo para o chat.</div>
+</div></div></div>
+</div></div></section>
+
+<section class="section" id="demo"><div class="wrap">
+<div class="section-head reveal"><span class="kicker">Teste rápido</span><h2>Quanto você já usa da Claude?</h2><p class="muted">Escolha como você resolveria a tarefa. No fim, veja seu nível.</p></div>
+<div class="demo reveal"><div class="demo-box">
+<div class="small">DESAFIO 01 / 01</div><div class="task">Você recebeu uma planilha com 15.000 vendas. O que faria?</div>
+<button class="choice" data-score="1">“Vou copiar alguns dados aqui e perguntar o que você acha.”</button>
+<button class="choice" data-score="2">“Vou anexar a planilha e pedir um resumo.”</button>
+<button class="choice" data-score="4">“Vou anexar a planilha e pedir análise, cruzamentos, gráficos e validação dos números.”</button>
+</div><div class="demo-box result"><div class="small">SEU RESULTADO</div><h3 id="resultTitle">Faça sua escolha →</h3><p id="resultText" class="muted">A diferença está menos na pergunta e mais em quantas capacidades você coloca para trabalhar.</p><div class="meter"><i id="meter"></i></div><button class="btn" onclick="document.querySelector('#oferta').scrollIntoView({behavior:'smooth'})">Ver o que falta aprender</button></div></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-head reveal"><span class="kicker">Experiência</span><h2>O tipo de descoberta que muda sua forma de trabalhar.</h2></div>
+<div class="quotes">
+<div class="quote reveal"><div class="avatar">M</div><p>“Eu achava que era só uma conversa. Quando comecei a tratar as tarefas como projetos, mudou completamente meu fluxo.”</p><b>Marina · Designer</b></div>
+<div class="quote reveal"><div class="avatar">R</div><p>“A parte que mais me surpreendeu foi transformar tarefas repetitivas em ferramentas que eu realmente consigo usar.”</p><b>Rafael · Freelancer</b></div>
+<div class="quote reveal"><div class="avatar">L</div><p>“O guia me fez parar de pensar só em prompts e começar a pensar em processos.”</p><b>Lucas · Estudante</b></div>
+</div><p class="small" style="margin-top:16px">Depoimentos demonstrativos para composição da página.</p>
+</div></section>
+
+<section class="section" id="oferta"><div class="wrap">
+<div class="offer reveal"><div><span class="kicker">Oferta</span><h2>Além do Chat</h2><p class="muted">Um guia prático para sair do uso básico e explorar recursos que podem economizar tempo no seu dia a dia.</p><ul><li>Mapa dos principais recursos</li><li>Exemplos práticos de uso</li><li>Fluxos para produtividade, dados e criação</li><li>Checklist para descobrir o que você ainda não usa</li></ul></div>
+<div><div class="small">ACESSO DIGITAL</div><div class="price">R$ 19,90 <small>pagamento único</small></div><a class="btn" href="https://pay.hotmart.com/N107685610D" target="_blank" rel="noopener noreferrer" style="display:block;width:100%;margin:18px 0;text-align:center">Quero acessar o guia →</a><p class="small">Pagamento seguro pela Hotmart.</p></div></div>
+<table class="compare reveal"><tr><th>Sem o guia</th><th>Com o guia</th></tr><tr><td>Usa só perguntas e respostas</td><td>Enxerga a ferramenta como um ambiente de trabalho</td></tr><tr><td>Repete contexto</td><td>Organiza projetos e preferências</td></tr><tr><td>Entrega texto</td><td>Cria arquivos e ferramentas</td></tr><tr><td>Resolve uma tarefa por vez</td><td>Cria processos reutilizáveis</td></tr></table>
+</div></section>
+
+<section class="section"><div class="wrap"><div class="section-head reveal"><span class="kicker">Dúvidas</span><h2>Perguntas frequentes.</h2></div>
+<div class="faq reveal"><button>Isso ensina “prompts secretos”? <span>+</span></button><div class="answer">Não. A proposta é mostrar recursos e formas práticas de trabalhar com eles, sem depender de truques mágicos.</div></div>
+<div class="faq reveal"><button>Preciso saber programar? <span>+</span></button><div class="answer">Não. Alguns recursos envolvem código, mas você pode usar muitos deles sem escrever uma linha.</div></div>
+<div class="faq reveal"><button>Funciona para estudo e trabalho? <span>+</span></button><div class="answer">Sim. Os exemplos são pensados para tarefas de estudo, criação, análise e produtividade.</div></div>
+<div class="faq reveal"><button>Os recursos são iguais para todo mundo? <span>+</span></button><div class="answer">Não necessariamente. Disponibilidade pode variar conforme plano, produto, região, configurações e integrações habilitadas.</div></div>
+</div></section>
+</main>
+
+<footer>Além do Chat · Guia digital demonstrativo</footer>
+<div class="sticky"><span>Descubra o que você ainda não está usando.</span><a class="btn" href="https://pay.hotmart.com/N107685610D" target="_blank" rel="noopener noreferrer">Conhecer o guia →</a></div>
+<script>
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('open')));
+document.querySelectorAll('.faq button').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('open')));
+const choices=document.querySelectorAll('.choice'), title=document.querySelector('#resultTitle'), text=document.querySelector('#resultText'), meter=document.querySelector('#meter');
+choices.forEach(c=>c.addEventListener('click',()=>{
+ const s=+c.dataset.score;
+ meter.style.width=(s/4*100)+'%';
+ if(s===1){title.textContent='Você está no nível básico.';text.textContent='Você usa a Claude principalmente como chat. Há bastante espaço para ganhar produtividade.'}
+ else if(s===2){title.textContent='Você já começou a explorar.';text.textContent='Você sabe anexar contexto, mas ainda pode transformar tarefas em processos e ferramentas.'}
+ else{title.textContent='Você pensa como usuário avançado.';text.textContent='Você já enxerga dados, arquivos, ferramentas e automações como parte da solução.'}
+}));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
